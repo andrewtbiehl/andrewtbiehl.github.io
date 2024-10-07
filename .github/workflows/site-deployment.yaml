@@ -29,7 +29,7 @@ jobs:
           rustup install ${{env.RUST_VERSION}}
           rustup default ${{env.RUST_VERSION}}
       - name: Restore project Rust cache
-        uses: actions/cache@v4.0.2
+        uses: actions/cache@v4.1.0
         with:
           key: rust-packages-${{hashFiles('**/Gemfile.lock', '**/rust-toolchain.toml')}}
           path: ~/.cargo
